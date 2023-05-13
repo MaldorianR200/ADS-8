@@ -8,7 +8,7 @@ Train::Train() {
 void Train::addCage(bool light) {
   if (first == nullptr) {
     first = new Cage();
-    first -> light = lignt;
+    first -> light = light;
     first -> next = first;
     first -> prev = first;
   } else {
@@ -35,12 +35,11 @@ int Train::getLength() {
         cur = cur -> prev;
         ++countOp;
       }
-		if (cur->light == false) 
-	      return count;
+	    if (cur->light == false) 
+		    return count;
 	    else
-			count = 1;
-			
-    }
+		    count = 1;
+	}
   }
 }
 
