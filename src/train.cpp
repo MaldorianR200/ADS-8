@@ -11,9 +11,9 @@ void Train::addCage(bool light) {
     first -> light = light;
 		first -> next = first;
 		first -> prev = first;
-   } else {
+  } else {
     Cage* nextCage = new Cage();
-		nextCage -> light = light;
+    nextCage -> light = light;
 		nextCage -> prev = first -> prev;
 		nextCage -> next = first;
 		first -> prev -> next = nextCage;
@@ -55,5 +55,5 @@ void Train::checkF(Cage* cur, int& count) {
   if (cur->light == false) {
     ++count;
     ++countOp;
-	}
+  }
 }
